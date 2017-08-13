@@ -1,6 +1,6 @@
 -- reference https://sqlfascination.com/2010/03/10/locating-table-scans-within-the-query-cache/
 
-declare @DatabaseName varchar(100) = 'DatabaseName'
+declare @DatabaseName varchar(100) = '[databaseName]';
 
 WITH XMLNAMESPACES(DEFAULT N'http://schemas.microsoft.com/sqlserver/2004/07/showplan'),
 CachedPlans (DatabaseName,SchemaName,ObjectName,PhysicalOperator, LogicalOperator, QueryText,QueryPlan, CacheObjectType, ObjectType)
@@ -42,13 +42,27 @@ SELECT
 	QueryText,
 	CacheObjectType, 
 	ObjectType, 
-	queryplan
+	queryplan,
+	DMVRows.[RowCount]
 FROM
 	CachedPlans
+	CROSS APPLY 
+	(
+		select 
+			sum(row_count) as [RowCount]
+		from sys.dm_db_partition_stats as sdmvPTNS
+		where 
+			sdmvPTNS.index_id < 2
+			and sdmvPTNS.object_id = object_id(CachedPlans.ObjectName)
+		group by object_id
+	) as DMVRows
 WHERE
 	CacheObjectType = N'Compiled Plan'
 	and (PhysicalOperator = 'Clustered Index Scan' 
 	or PhysicalOperator = 'Table Scan' 
 	or PhysicalOperator = 'Index Scan')
 	and DatabaseName = @DatabaseName
-order by ObjectName
+order by DMVRows.[RowCount], ObjectName
+
+
+
