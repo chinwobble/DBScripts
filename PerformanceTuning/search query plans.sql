@@ -3,7 +3,7 @@
 -- https://littlekendra.com/2017/01/24/how-to-find-queries-using-an-index-and-queries-using-index-hints/
 
 
-SELECT 
+SELECT top(1)
 	querystats.plan_handle,
 	querystats.query_hash,
 	SUBSTRING(sqltext.text, (querystats.statement_start_offset / 2) + 1, 
@@ -24,7 +24,7 @@ CROSS APPLY sys.dm_exec_text_query_plan
 CROSS APPLY sys.dm_exec_sql_text(querystats.sql_handle) AS sqltext 
 WHERE CAST(query_plan as xml).exist('declare namespace 
 		qplan="http://schemas.microsoft.com/sqlserver/2004/07/showplan";
-        //qplan:RelOp/qplan:IndexScan/qplan:Object[@Index="[pk_bigProduct]"]')=1
+        //qplan:Object[@Index="[PK_email]"]')=1
 ORDER BY querystats.last_execution_time DESC
 OPTION (RECOMPILE);
 GO

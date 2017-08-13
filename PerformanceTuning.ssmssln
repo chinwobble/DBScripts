@@ -3,7 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # SQL Server Management Studio Solution File, Format Version 14.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "PerformanceTuning", "PerformanceTuning\PerformanceTuning.ssmssqlproj", "{B89165ED-B921-4951-AA67-8D8D553CFED1}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{000AF03F-68CF-463E-AC95-9D7930B8F90C}.Default|Default.ActiveCfg = Default
+		{B89165ED-B921-4951-AA67-8D8D553CFED1}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
