@@ -3,7 +3,19 @@
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="dsssqlp01:DESKTOP-IHDCNJO\benne">
+        <ConnectionNode Name="(local):3DSSL61\ba">
+          <Created>2017-08-16T13:23:29.3878263+10:00</Created>
+          <Type>SQL</Type>
+          <Server>(local)</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="dsssqlp01:3DSSL61\ba">
           <Created>2017-08-13T12:09:56.7212735+10:00</Created>
           <Type>SQL</Type>
           <Server>dsssqlp01</Server>
@@ -19,6 +31,12 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
+        <FileNode Name="find table scans.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>find table scans.sql</FullPath>
+        </FileNode>
         <FileNode Name="Index Stats.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
