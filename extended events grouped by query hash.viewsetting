@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <columnSettings>
+    <ColumnSetting name="name">
+      <width>160</width>
+      <mergedColumns />
+    </ColumnSetting>
+    <ColumnSetting name="timestamp">
+      <width>160</width>
+      <mergedColumns />
+    </ColumnSetting>
+    <ColumnSetting name="statement">
+      <width>292</width>
+      <mergedColumns />
+    </ColumnSetting>
+    <ColumnSetting name="duration">
+      <width>100</width>
+      <mergedColumns />
+    </ColumnSetting>
+    <ColumnSetting name="row_count">
+      <width>100</width>
+      <mergedColumns />
+    </ColumnSetting>
+    <ColumnSetting name="logical_reads">
+      <width>100</width>
+      <mergedColumns />
+    </ColumnSetting>
+    <ColumnSetting name="writes">
+      <width>100</width>
+      <mergedColumns />
+    </ColumnSetting>
+    <ColumnSetting name="client_app_name">
+      <width>100</width>
+      <mergedColumns />
+    </ColumnSetting>
+    <ColumnSetting name="physical_reads">
+      <width>100</width>
+      <mergedColumns />
+    </ColumnSetting>
+    <ColumnSetting name="batch_text">
+      <width>100</width>
+      <mergedColumns />
+    </ColumnSetting>
+    <ColumnSetting name="sql_text">
+      <width>100</width>
+      <mergedColumns />
+    </ColumnSetting>
+    <ColumnSetting name="query_hash">
+      <width>100</width>
+      <mergedColumns />
+    </ColumnSetting>
+  </columnSettings>
+  <filterExp xsi:type="FilterBinaryExpression">
+    <BinaryOperator>NE</BinaryOperator>
+    <Column>object_name</Column>
+    <Value>sp_reset_connection</Value>
+  </filterExp>
+</ViewSetting>
