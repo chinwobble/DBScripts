@@ -63,6 +63,3 @@ WHERE
 	or PhysicalOperator = 'Index Scan')
 	and DatabaseName = @DatabaseName
 order by DMVRows.[RowCount], ObjectName
-
-
-
