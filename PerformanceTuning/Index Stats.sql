@@ -1,5 +1,5 @@
 -- https://docs.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql
-use [3dss_dev];
+
 DECLARE @db_id SMALLINT = DB_ID(N'db');   
 DECLARE @object_id INT = OBJECT_ID(N'dbo.email');  
 
