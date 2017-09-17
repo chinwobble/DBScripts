@@ -3,7 +3,7 @@
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="(local):3DSSL61\ba">
+        <ConnectionNode Name="(local):DESKTOP-IHDCNJO\benne">
           <Created>2017-08-16T13:23:29.3878263+10:00</Created>
           <Type>SQL</Type>
           <Server>(local)</Server>
@@ -15,7 +15,7 @@
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
           <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
         </ConnectionNode>
-        <ConnectionNode Name="dsssqlp01:3DSSL61\ba">
+        <ConnectionNode Name="dsssqlp01:DESKTOP-IHDCNJO\benne">
           <Created>2017-08-13T12:09:56.7212735+10:00</Created>
           <Type>SQL</Type>
           <Server>dsssqlp01</Server>
@@ -48,6 +48,12 @@
           <AssociatedConnSrvName>dsssqlp01</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Memory usage.sql</FullPath>
+        </FileNode>
+        <FileNode Name="search for index used in plan cache.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>search for index used in plan cache.sql</FullPath>
         </FileNode>
         <FileNode Name="search query plans.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:dsssqlp01:True</AssociatedConnectionMoniker>
